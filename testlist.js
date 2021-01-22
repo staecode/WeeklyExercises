@@ -42,11 +42,12 @@ if(path == s) {
 // display initial ability to insert, count items
 console.log("The list has " + list.length() + " nodes: ");
 console.log();
-list.display();
+list.display(); 
 
 if (path == r) {
     // display initial ability to recursively traverse at node,
     // if needed, count items
+    // 
     console.log("Checking Recursive Display");
     console.log();
     list.display_R();
