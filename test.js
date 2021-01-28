@@ -42,8 +42,13 @@ if(path == s) {
 
 // display initial ability to insert, count items
 console.log("The list has " + list.length() + " nodes: ");
+if(path == t) {
+    console.log("The height of the tree is " + list.height() + " levels");
+}
 console.log();
 list.display(); 
+
+
 
 // if (path == r) {
 //     // display initial ability to recursively traverse at node,

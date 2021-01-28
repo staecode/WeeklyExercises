@@ -85,6 +85,24 @@ class Tree {
         this.insert_R(this.head, data);
     }
 
+    height_R(node) {
+        if(node) {
+            let left = 0;
+            let right = 0;
+            if(node.left != null)  {
+                left = this.height_R(node.left);
+            }
+            if(node.right != null)  {
+                right = this.height_R(node.right);
+            }
+            return 1 + (left > right ? left : right);
+        }
+    }
+
+    height() {
+        return this.height_R(this.head);
+    }
+
     display_R(node) {
         if(node) {
             if(node.left != null) {
