@@ -84,13 +84,13 @@ if(path != t) {
         console.log();
         // test pop
         console.log("Popping at head: ");
-        let node = list.pop();
-        console.log("Num from popped: " + node.data);
+        let num2 = list.pop();
+        console.log("Num from popped: " + num2);
         console.log();
         // peak again, confirm pop further
         console.log("Peeking at head: ");
-        let num2 = list.peek();
-        console.log("Num peeked: " + num2);
+        let num3 = list.peek();
+        console.log("Num peeked: " + num3);
         console.log();
         // push popped back onto stack
         console.log("Pushing val: " + num);

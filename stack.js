@@ -38,7 +38,7 @@ class Stack {
         let new_node = new ListNode(data);
         if(this.head != null) {
             new_node.next = this.head;
-        }
+        } 
         this.head = new_node;
         this.current_length++;
     } 
@@ -55,7 +55,8 @@ class Stack {
         if(this.head != null) {
             let saved = this.head;
             this.head = saved.next;
-            return saved;
+            this.current_length--;
+            return saved.data;
         }
     }
 
@@ -144,24 +145,35 @@ class Stack {
     }
 
     reverse_in_place() {
-        // if (this.head != null) {
-        //     let new_stack = new LinkedList()
-        // }
         if (this.head != null) {
-            let node = this.head;
-            let num_arr = new Array(this.current_length);
-            let i = 0;
-            while(node) {
-                num_arr[i] = node.data;
-                i++;
-                node = node.next;
+            let start_length = this.length();
+            let holder = new Array(start_length);
+            for(let i = 0; i < start_length; i++) {
+                if(this.length() > 0) {
+                    holder[i] = this.pop();
+                }
             }
-            this.head = null;
-            this.current_length = 0;
-            for(let j = 0; j < i; j++) {
-                this.push(num_arr[j]);
+            if(this.empty()) {
+                for(let j = 0; j < start_length; j++) {
+                    this.push(holder[j]);
+                }
             }
         }
+        // if (this.head != null) {
+        //     let node = this.head;
+        //     let num_arr = new Array(this.current_length);
+        //     let i = 0;
+        //     while(node) {
+        //         num_arr[i] = node.data;
+        //         i++;
+        //         node = node.next;
+        //     }
+        //     this.head = null;
+        //     this.current_length = 0;
+        //     for(let j = 0; j < i; j++) {
+        //         this.push(num_arr[j]);
+        //     }
+        // }
     }
 
     // sort_to_ascending() {
