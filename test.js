@@ -156,11 +156,11 @@ if(path != t) {
     console.log();
 }
 
-// // remove items at value
-// console.log("Remove items with values 1, 555 (in that order)");
-// list.remove_by_value(1);
-// list.remove_by_value(555);
-// console.log();
+// remove items at value
+console.log("Remove items with values 1, 555 (in that order)");
+list.remove_by_value(1);
+list.remove_by_value(555);
+console.log();
 
 if(path != t) {
     if (path == r) {

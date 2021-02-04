@@ -17,11 +17,16 @@ class ListNode {
 class Stack {
     constructor(head = null) {
         this.head = head;
-        this.current_length = 0;
     }
 
     length() {
-        return this.current_length;
+        let node = this.head;
+        let count = 0;
+        while(node) {
+            count++;
+            node = node.next;
+        }
+        return count;
     }
 
     display() {
@@ -40,11 +45,11 @@ class Stack {
             new_node.next = this.head;
         } 
         this.head = new_node;
-        this.current_length++;
     } 
 
     empty() {
         if(this.head == null) {
+            console.log("Nothing here");
             return true;
         } else {
             false;
@@ -55,9 +60,8 @@ class Stack {
         if(this.head != null) {
             let saved = this.head;
             this.head = saved.next;
-            this.current_length--;
             return saved.data;
-        }
+        } 
     }
 
     peek() {
@@ -141,7 +145,7 @@ class Stack {
                     prev_node.next = node.next;
                 }
             }
-        }
+        } 
     }
 
     reverse_in_place() {
@@ -157,23 +161,8 @@ class Stack {
                 for(let j = 0; j < start_length; j++) {
                     this.push(holder[j]);
                 }
-            }
+            } 
         }
-        // if (this.head != null) {
-        //     let node = this.head;
-        //     let num_arr = new Array(this.current_length);
-        //     let i = 0;
-        //     while(node) {
-        //         num_arr[i] = node.data;
-        //         i++;
-        //         node = node.next;
-        //     }
-        //     this.head = null;
-        //     this.current_length = 0;
-        //     for(let j = 0; j < i; j++) {
-        //         this.push(num_arr[j]);
-        //     }
-        // }
     }
 
     // sort_to_ascending() {
