@@ -115,6 +115,24 @@ class Tree {
         }
     }
 
+    level_display_R(node, level) {
+        if(node) {
+            if(level == 1) {
+                console.log(node.data + ' ');
+            } else {
+                this.level_display_R(node.left, level - 1);
+                this.level_display_R(node.right, level - 1);
+            }
+        } 
+    }
+
+    level_display() {
+        for(let i = 1; i < this.height(); i++) {
+            console.log('At Height ' + (i) + ':');
+            this.level_display_R(this.head, i);
+        }
+    }
+
     display() {
         this.display_R(this.head);
     }

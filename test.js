@@ -48,6 +48,11 @@ if(path == t) {
 console.log();
 list.display(); 
 
+if(path == t) {
+    console.log();
+    console.log("Tree list aditional check, level display: ");;
+    list.level_display();
+}
 
 
 // if (path == r) {
