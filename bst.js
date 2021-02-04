@@ -4,6 +4,7 @@
 
 // Binary Seach Tree
 
+
 class TreeNode {
     constructor(data) {
         this.data = data;
@@ -15,11 +16,6 @@ class TreeNode {
 class Tree {
     constructor(head = null) {
         this.head = head;
-        if(head != null) {
-               this.current_length = this.length();
-        } else {
-            this.current_length = 0;
-        }
     }
 
     length_R(node) {
@@ -127,7 +123,7 @@ class Tree {
     }
 
     level_display() {
-        for(let i = 1; i < this.height(); i++) {
+        for(let i = 1; i <= this.height(); i++) {
             console.log('At Height ' + (i) + ':');
             this.level_display_R(this.head, i);
         }
@@ -137,7 +133,71 @@ class Tree {
         this.display_R(this.head);
     }
 
-    remove_by_value
+    find_lca_R(node, n1, n2) {
+        if(node) {
+            if((node.data > n1) && (node.data > n2)) {
+                return this.find_lca_R(node.left, n1, n2);
+            } else if((node.data < n1) && (node.data < n2)) {
+                return this.find_lca_R(node.right, n1, n2);
+            } else {
+                return node.data;
+            }
+        }
+    }
+
+    find_lca(num1, num2) {
+        let result = this.find_lca_R(this.head, num1, num2); {
+            if(result) {
+                return result;
+            } else {
+                return( num1 < num2 ? num1 : num2);
+            }
+        }
+    }
+
+    // remove_by_value_R(prev, node, num) {
+    //     if(node) {
+    //         if(node.data == num) {
+    //             if(node == this.head) {
+    //                 if(node.right == null) {
+    //                     if(node.left != null) {
+    //                         this.head = node.left;
+    //                     }
+    //                 } else if(node.left == null) {
+    //                     if(node.right != null) {
+    //                         this.head = node.right;
+    //                     }
+    //                 } else {
+    //                     this.head = null;
+    //                 }
+    //             } else {
+    //                 if((node.left == null) && (node.right == null)) {
+    //                     prev.next = null;
+    //                 } else if(node.left == null) {
+    //                     prev.next = node.right;
+    //                 } else if(node.right == null) {
+    //                     prev.next = node.left;
+    //                 } else {
+    //                     let pred = node;
+    //                     let next = node.right;
+    //                     while(next.left != null) {
+    //                         pred = next;
+    //                         next = next.left;
+    //                     } 
+
+    //                 }
+    //             }
+    //         } else {
+    //             this.remove_by_value_R(node, node.left);
+    //             this.remove_by_value_R(node, node.right);
+    //         }
+    //     }
+    // }
+
+    // remove_by_value(num) {
+    //     let prev = this.head;
+    //     this.remove_by_value_R(prev, this.head, num);
+    // }
 
 }
 

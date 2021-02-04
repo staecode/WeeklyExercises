@@ -143,7 +143,14 @@ if(path != s) {
 console.log();
 
 if(path == t) {
-    list.display();
+    console.log('Inserting values {30, 70} for lca testing');
+    console.log();
+    list.insert(30);
+    list.insert(70);
+    list.level_display();
+
+    let lca = list.find_lca(30, 70);
+    console.log('LCA: ' + lca);
     console.log();
 }
 
@@ -157,10 +164,10 @@ if(path != t) {
 }
 
 // remove items at value
-console.log("Remove items with values 1, 555 (in that order)");
-list.remove_by_value(1);
-list.remove_by_value(555);
-console.log();
+// console.log("Remove items with values 1, 555 (in that order)");
+// list.remove_by_value(1);
+// list.remove_by_value(555);
+// console.log();
 
 if(path != t) {
     if (path == r) {
