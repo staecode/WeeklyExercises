@@ -3,7 +3,7 @@
 // written by Staci Harding for PSU CS300 Winter 21
 // Instructor Fei Xie
 
-// List Class will create Stack list implemented linked list, with 
+// Stack list implemented linked list
 
 class ListNode {
     constructor(data = 0) {
@@ -14,7 +14,7 @@ class ListNode {
 
 //implemented as stack, kept class name to use same test code
 // (and the stack is linked by node)
-class LinkedList {
+class Stack {
     constructor(head = null) {
         this.head = head;
         this.current_length = 0;
@@ -144,6 +144,9 @@ class LinkedList {
     }
 
     reverse_in_place() {
+        // if (this.head != null) {
+        //     let new_stack = new LinkedList()
+        // }
         if (this.head != null) {
             let node = this.head;
             let num_arr = new Array(this.current_length);
@@ -166,4 +169,4 @@ class LinkedList {
     // }
 }
 
-module.exports = LinkedList 
+module.exports = Stack

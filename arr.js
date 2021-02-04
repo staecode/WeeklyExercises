@@ -2,7 +2,7 @@
 // written by Staci Harding for PSU CS300 Winter 21
 // Instructor Fei Xie
 
-// List Class, array storage linked list implementation
+// Array Class, array storage linked list implementation
 
 class ListNode {
     constructor(data) {
@@ -11,7 +11,7 @@ class ListNode {
     }
 }
 
-class LinkedList {
+class ArrayList {
     constructor(head = null, size) {
         this.head = head;
         this.max_size = size;
@@ -209,4 +209,4 @@ class LinkedList {
 
 }
 
-module.exports = LinkedList 
+module.exports = ArrayList

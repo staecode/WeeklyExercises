@@ -3,7 +3,8 @@
 // written by Staci Harding for PSU CS300 Winter 21
 // Instructor Fei Xie
 
-// List Class will create queue list implemented linked list
+// Queue will create queue list implemented linked list
+
 
 const LinkedList = require('./stack.js');
 

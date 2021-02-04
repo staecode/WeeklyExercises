@@ -137,6 +137,8 @@ class Tree {
         this.display_R(this.head);
     }
 
+    remove_by_value
+
 }
 
 module.exports = Tree
