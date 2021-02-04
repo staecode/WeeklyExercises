@@ -10,7 +10,8 @@ Javascript experience: used minimally when I taught myself web design, in last I
 Class description: 300 level courses at Portland State University, Discussion of Software Engineering. Weekly class
                    programming exercises are submitted for attendence. Learned these data structures in C++, working
                    them out for the first time in JavaScript (a language with no memory management - definitely a 
-                   new and weird experience.) Will probably laugh at these quickly and crudely made class quizes.
-                   Testing file allows command line selection of other files in repository, for easy of working with
+                   new and weird experience.) Class quiz exercises done in 40 minute burst, end of class period. 
+                   
+                   Testing file allows command line selection of other files in repository, for ease of working with
                    code files each week as we create a few methods of a data structure or a new, quick data structure
                    using previously created structures. 
